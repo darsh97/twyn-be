@@ -55,8 +55,7 @@ def send_contact_notification_sync(contact: Contact):
 
     # 2. Prepare the Resend payload
     params = {
-        # Use the user's name as the sender name, but the verified MAIL_FROM email
-        "from": f"{contact.name} <{MAIL_FROM}>",
+        "from": f"{MAIL_FROM}",
         "to": RECIPIENT_EMAIL,
         "subject": f"New Inquiry: {contact.name} ({contact.company})",
         "html": html_content
