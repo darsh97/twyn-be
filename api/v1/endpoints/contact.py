@@ -13,7 +13,7 @@ router = APIRouter(tags=["Contacts"])
     "/contacts",
     response_model=ContactResponse,
     status_code=status.HTTP_202_ACCEPTED,
-    summary="Submit contact form and queu e email notification via Resend"
+    summary="Submit contact form and queue email notification via Resend"
 )
 async def create_contact_and_email(
         contact_data: Contact,
